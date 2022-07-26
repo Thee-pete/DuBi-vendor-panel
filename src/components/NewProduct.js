@@ -1,14 +1,23 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
-///navigate to shop after adding product
 
-function NewProduct(props) {
+function NewProduct() {
+
+    const navigate = useNavigate();
+    function handleClick(){
+        //need to get the specific shop so use id to identify
+        navigate("/shop");
+    }
+
+
+
+
     return (
         <div>
             <h1>New Product</h1>
-            <NavLink to="/shop">navigate to shop after save</NavLink>
+           <button onClick={handleClick}></button>
         </div>
     );
 }
