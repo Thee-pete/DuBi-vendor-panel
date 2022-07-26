@@ -4,6 +4,7 @@ import AllShops from './AllShops';
 
 //show list of shops in div/gridview
 function MyShops(props) {
+  
     return (
         <div>
             <h1>My shops</h1>

@@ -17,7 +17,7 @@ function NewProduct() {
     return (
         <div>
             <h1>New Product</h1>
-           <button onClick={handleClick}></button>
+           <button onClick={handleClick}>SAVE</button>
         </div>
     );
 }
