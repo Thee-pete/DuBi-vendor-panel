@@ -5,7 +5,8 @@ function NewShop(props) {
 
     const navigate = useNavigate();
     function handleClick(){
-        navigate("/myshops")
+        //navigate to created shop or to the whole list of shops?
+        navigate("/shop")
     }
 
     return (

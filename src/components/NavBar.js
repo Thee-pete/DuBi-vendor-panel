@@ -1,10 +1,15 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+
+import {NavLink, useNavigate} from 'react-router-dom';
 
 function NavBar() {
+    const navigate = useNavigate();
+    function handleClick(){
+        navigate("/");
+    }
     return (
-        <div>
-            <h1>DuBi</h1>
+        <div className="nav-bar">
+            <h1 onClick={handleClick}>DuBi</h1>
             <NavLink style ={{ marginRight: "10px" }} to="/myshops">My Shops</NavLink>
      
             

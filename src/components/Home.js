@@ -7,9 +7,11 @@ function Home(props) {
     function handleClick(){
         navigate("/newshop");
     }
+ 
+
     return (
         <div>
-            <h1>Home</h1>
+            <h1 >Home</h1>
             <p>Welcome to dubi</p>
             <button onClick={handleClick}>Create new store</button>
             
