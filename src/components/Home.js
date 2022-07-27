@@ -11,9 +11,12 @@ function Home(props) {
 
     return (
         <div>
-            <h1 >Home</h1>
-            <p>Welcome to dubi</p>
-            <button onClick={handleClick}>Create new store</button>
+            
+            <p className='dubi-info'>Welcome vendor, 
+                DuBi is a platform where you can create your own online store 
+                and use the platform to reach a wider online market. 
+                We will handle the packaging and distribution of your products.</p>
+            <button className='create-store-btn' onClick={handleClick}>Create new store</button>
             
         </div>
     );

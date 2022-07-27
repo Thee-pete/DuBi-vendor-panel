@@ -6,6 +6,7 @@ import Shop from './Shop';
 import NewProduct from './NewProduct';
 import NewShop from './NewShop';
 import Home from './Home';
+import Footer from "./Footer";
 
 function App() {
 
@@ -22,9 +23,9 @@ function App() {
         <Route path="/" element={ <Home />}>
          
          </Route>
-     
-      </Routes>
     
+      </Routes>
+      <Footer/>
     </div>
   );
 }
