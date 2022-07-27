@@ -9,8 +9,8 @@ function NavBar() {
     }
     return (
         <div className="nav-bar">
-            <h1 onClick={handleClick}>DuBi</h1>
-            <NavLink style ={{ marginRight: "10px" }} to="/myshops">My Shops</NavLink>
+            <h1 className="comp-name" onClick={handleClick}>DuBi</h1>
+            <NavLink to="/myshops">My Shops</NavLink>
      
             
         </div>
