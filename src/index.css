@@ -107,5 +107,50 @@ code {
   text-align: center;
 
 }
+.shop-container{
+  border-radius: 10px;
+  border: solid black 2px;
+  width: 200px;
+  margin: 5px;
+  align-self: center;
+}
+.product-container{
+  border-radius: 10px;
+  border: solid black 2px;
+  width: 200px;
+  margin: 5px;
+  align-self: center;
+}
+
+
+
+.newproduct-container label{
+    min-width: 100%;
+  
+}
+
+.newproduct-container input{
+    width: 30%;
+    padding: 12px 20px;
+    margin-left: 30px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+
+
+.newproduct-container button{
+  width:max-content;
+  height:50px;
+  margin-top: 300px;
+  background-color:  #282c34;
+  color: white;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
 
 

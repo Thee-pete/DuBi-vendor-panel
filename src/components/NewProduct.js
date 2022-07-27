@@ -6,8 +6,8 @@ import { useNavigate } from 'react-router-dom';
 function NewProduct() {
 
     const navigate = useNavigate();
-    function handleClick(){
-        //need to get the specific shop so use id to identify
+    function handleSubmit(){
+        //need to get the specific shop so use id to identify and add the product to the shop
         navigate("/shoppage");
     }
 
@@ -15,9 +15,27 @@ function NewProduct() {
 
 
     return (
-        <div>
+        <div className='newproduct-container'>
             <h1>New Product</h1>
-           <button onClick={handleClick}>SAVE</button>
+            <form onSubmit={handleSubmit}>
+              <label>
+                Name:
+               <input type="text" name="name" />
+               </label>
+               <br></br>
+               <label>
+                Price:
+               <input type="text" name="name" />
+               </label>
+               <br></br>
+               <label>
+                Quantity:
+               <input type="text" name="name" />
+               </label>
+               <br></br>
+               <br></br>
+              <button type="submit" value="Submit">SAVE</button>
+             </form>   
         </div>
     );
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Product from './Product';
 
 function ShopPage(props) {
     ///get all products from specific shop id
@@ -11,13 +12,13 @@ function ShopPage(props) {
     }
     return (
         <div>
-            <h1>Shop name</h1> 
-            <p>Category</p>
+            <h1>Shop name from server</h1> 
+            <p>Category from server</p>
             <div className='shop-products'>
             <button onClick={handleClick}>New Product</button>
             <ul>
-                <li>product</li>
-                <li>product</li>
+                <li><Product/></li>
+                <li><Product/></li>
             </ul>
            
             </div>

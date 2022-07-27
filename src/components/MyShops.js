@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import AllShops from './AllShops';
-import Shop from './ShopPage';
+import Shop from './Shop';
 
 //show list of shops in div/gridview
 function MyShops(props) {
@@ -12,9 +11,9 @@ function MyShops(props) {
             <NavLink to="/newshop">New shop</NavLink>
            
            <ul>
-            <li>shop</li>
-            <li>shop</li>
-            <li>shop</li>
+            <li><Shop/></li>
+            <li><Shop/></li>
+            <li><Shop/></li>
            </ul>
            
            
