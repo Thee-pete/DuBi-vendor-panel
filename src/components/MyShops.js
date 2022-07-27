@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Shop from './Shop';
 
 //show list of shops in div/gridview
-function MyShops(props) {
+function MyShops() {
+
+   const [shops, setShops] = useState([]);
+
     const navigate = useNavigate();
     function handleOnClick(){
         navigate("/newshop");
     }
+
+
+    useEffect(()=>{
+
+        fetch("https://salty-basin-17655.herokuapp.com/shops")
+        .then((r) => r.json())
+        .then((data) => setShops(data))
+    },[])
+   
   
     return (
         <div >
@@ -16,9 +28,12 @@ function MyShops(props) {
             <button className='new-shop-btn' onClick={handleOnClick}>New shop</button>
            
            <ul className='available-shops'>
-            <li><Shop/></li>
-            <li><Shop/></li>
-            <li><Shop/></li>
+            { shops.map((shop)=> {
+
+                   return <Shop key={shop.id} shop={shop}/>
+
+            })}
+           
            </ul>
            
            </div>

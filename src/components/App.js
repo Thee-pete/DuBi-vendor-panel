@@ -10,6 +10,8 @@ import ShopPage from "./ShopPage";
 
 function App() {
 
+
+
   return (
     <div className="App">
       <NavBar/>
