@@ -1,13 +1,17 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import NavBar from './NavBar';
+import { useNavigate } from 'react-router-dom';
+
 
 function Home(props) {
+    const navigate = useNavigate();
+    function handleClick(){
+        navigate("/newshop");
+    }
     return (
         <div>
             <h1>Home</h1>
             <p>Welcome to dubi</p>
-            <NavLink to = "/newshop">Create new store</NavLink>
+            <button onClick={handleClick}>Create new store</button>
             
         </div>
     );

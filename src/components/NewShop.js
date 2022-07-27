@@ -10,9 +10,7 @@ function NewShop(props) {
 
     return (
         <div>
-            <h1>New Shop</h1>
-            
-           
+            <h1>New Shop</h1>           
             <button onClick={handleClick}>SAVE</button>
         </div>
     );
