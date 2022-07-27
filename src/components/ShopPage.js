@@ -4,10 +4,7 @@ import Product from './Product';
 
 function ShopPage() {
     const params = useParams();
-    let shopId = 1;
-
-   
-
+  
     const [products, setProducts] =useState([]);
 
     ///get all products from specific shop id

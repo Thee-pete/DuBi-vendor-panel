@@ -7,6 +7,8 @@ function Shop({shop}) {
    /*const params = useParams();
    let shopId = params.id;*/
 
+
+
     const navigate =useNavigate();
     function handleOnClick(){
         //navigate(`/shoppage${shop.id}`)

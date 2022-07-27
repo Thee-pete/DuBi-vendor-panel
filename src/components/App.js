@@ -1,5 +1,5 @@
 //import './App.css';
-import { Route, Routes, useParams } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import NavBar from './NavBar';
 import MyShops from './MyShops';
 import NewProduct from './NewProduct';
@@ -10,7 +10,6 @@ import ShopPage from "./ShopPage";
 
 function App() {
 
- 
 
 
 
