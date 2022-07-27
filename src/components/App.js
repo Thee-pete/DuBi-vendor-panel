@@ -1,5 +1,5 @@
 //import './App.css';
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useParams } from "react-router-dom";
 import NavBar from './NavBar';
 import MyShops from './MyShops';
 import NewProduct from './NewProduct';
@@ -9,6 +9,8 @@ import Footer from "./Footer";
 import ShopPage from "./ShopPage";
 
 function App() {
+
+ 
 
 
 

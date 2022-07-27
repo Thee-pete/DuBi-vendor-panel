@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Shop from './Shop';
 
-//show list of shops in div/gridview
+//show list of shops in list
 function MyShops() {
 
    const [shops, setShops] = useState([]);
+
 
     const navigate = useNavigate();
     function handleOnClick(){
