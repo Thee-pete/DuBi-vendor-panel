@@ -8,7 +8,7 @@ function NewProduct() {
     const navigate = useNavigate();
     function handleClick(){
         //need to get the specific shop so use id to identify
-        navigate("/shop");
+        navigate("/shoppage");
     }
 
 

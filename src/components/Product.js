@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AllProducts(props) {
+function Product(props) {
     //should be imported in the shop component
     return (
         <div>
@@ -9,4 +9,4 @@ function AllProducts(props) {
     );
 }
 
-export default AllProducts;
+export default Product;

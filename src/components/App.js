@@ -2,11 +2,11 @@
 import { Route, Routes } from "react-router-dom";
 import NavBar from './NavBar';
 import MyShops from './MyShops';
-import Shop from './Shop';
 import NewProduct from './NewProduct';
 import NewShop from './NewShop';
 import Home from './Home';
 import Footer from "./Footer";
+import ShopPage from "./ShopPage";
 
 function App() {
 
@@ -17,7 +17,7 @@ function App() {
       <Routes>
    
         <Route  path="/myshops" element= { <MyShops />}></Route>
-        <Route  path="/shop" element= { <Shop/>}></Route>
+        <Route  path="/shoppage" element= { <ShopPage/>}></Route>
         <Route  path="/newproduct" element= { <NewProduct />}></Route>
         <Route  path="/newshop" element= { <NewShop />}></Route>
         <Route path="/" element={ <Home />}>

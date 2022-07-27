@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Shop from './Shop';
+import Shop from './ShopPage';
 
 //map shops in the all shops grid and navigate to shop component when shop is clicked
 function AllShops(props) {
