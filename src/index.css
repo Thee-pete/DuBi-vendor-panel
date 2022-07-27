@@ -152,5 +152,36 @@ code {
   border-radius: 10px;
   text-align: center;
 }
+.shop-products{
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  
+}
+.add-new-product{
+  flex:1;
+  max-width: 20%;
+}
+.all-products-container{
+  display: flex;
+  max-width: 80%;
+}
+.shops-container{
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.new-shop-btn{
+  flex:1;
+  max-width: 20%;
+}
+.available-shops{
+  display: flex;
+  max-width: 80%;
+}
 
 

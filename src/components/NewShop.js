@@ -7,7 +7,7 @@ function NewShop(props) {
     function handleSubmit(event){
         event.preventDefault();
         //navigate to created shop or to the whole list of shops?
-        navigate("/shoppage")
+        navigate("/myshops")
     }
 
     return (

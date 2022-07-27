@@ -15,10 +15,13 @@ function ShopPage(props) {
             <h1>Shop name from server</h1> 
             <p>Category from server</p>
             <div className='shop-products'>
-            <button onClick={handleClick}>New Product</button>
-            <ul>
+            <button className='add-new-product' onClick={handleClick}>New Product</button>
+            <ul className='all-products-container'>
                 <li><Product/></li>
                 <li><Product/></li>
+                <li><Product/></li>
+                <li><Product/></li>
+              
             </ul>
            
             </div>
