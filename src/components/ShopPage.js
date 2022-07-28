@@ -25,7 +25,7 @@ function ShopPage() {
         
         })
 
-    },[params.shopId])
+    },[])
 
    /* useEffect(()=>{
         fetch(`https://salty-basin-17655.herokuapp.com/shops/${params.shopId}`)
