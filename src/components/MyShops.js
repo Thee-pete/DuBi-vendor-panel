@@ -22,17 +22,18 @@ function MyShops({shops,getShops}) {
     return (
         <div >
             <h1>My shops</h1>
+            <erm>hint:Click on the shop to view your products</erm>
             <div className='shops-container'>
-            <button className='new-shop-btn' onClick={handleOnClick}>New shop</button>
+            <button className='new-shop-btn' onClick={handleOnClick}></button>
            
-           <ul className='available-shops'>
+           <flex className='available-shops'> 
             { shops.map((shop)=> {
 
                    return <Shop key={shop.id} shop={shop} shopId = {shop.id} />
 
             })}
            
-           </ul>
+           </flex>
            
            </div>
          

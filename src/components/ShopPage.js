@@ -41,9 +41,9 @@ function ShopPage() {
         return (
         <div> 
             <h1>Shop</h1> 
-            <p></p>
+            <p>hint:please reload to view to view your added product</p>
             <div className='shop-products'>
-            <button className='add-new-product' onClick={handleClick}>New Product</button>
+            <button className='add-new-product' onClick={handleClick}></button>
             </div>
         </div>
             
@@ -55,7 +55,7 @@ function ShopPage() {
     return (
         <div>
             <h1>Shop</h1> 
-            <p></p>
+            <p>hint:please reload to view to view your added product</p>
             <div className='shop-products'>
             <button className='add-new-product' onClick={handleClick}>New Product</button>
             <ul className='all-products-container'>

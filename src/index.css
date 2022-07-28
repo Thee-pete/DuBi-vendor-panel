@@ -161,8 +161,16 @@ code {
   
 }
 .add-new-product{
-  flex:1;
-  max-width: 20%;
+  
+  background: url("./assets/plus.png") no-repeat 50% 50%;;
+  color: #7070707c;
+  background-size: contain;
+  cursor: pointer;
+  height:322px;
+  width: 200px;
+  border-radius: 10px;
+  opacity: 80%;
+  background-size: 70%;  
 }
 .all-products-container{
   display: flex;
@@ -176,8 +184,15 @@ code {
   margin-top: 20px;
 }
 .new-shop-btn{
-  flex:1;
-  max-width: 20%;
+  background: url("./assets/plus.png") no-repeat 50% 50%;;
+  color: #7070707c;
+  background-size: contain;
+  cursor: pointer;
+  height:235px;
+  width: 200px;
+  border-radius: 10px;
+  opacity: 80%;
+  background-size: 70%;
 }
 .available-shops{
   display: flex;
@@ -191,5 +206,6 @@ code {
   width:150px;
   height:150px;
 }
+
 
 

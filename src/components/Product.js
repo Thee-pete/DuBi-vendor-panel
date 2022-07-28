@@ -5,7 +5,7 @@ function Product({product}) {
     return (
         <div className='product-container'>
             <h1>{product.name}</h1>
-            <img src={product.image} alt= "product image"/>
+            <img src={product.image} alt= "product"/>
             <p>Price: {product.price}</p>
             <p>Quantity: {product.quantity}</p>
         </div>
