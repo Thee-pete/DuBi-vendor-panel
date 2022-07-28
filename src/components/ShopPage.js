@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Product from './Product';
 
 function ShopPage() {
     const params = useParams();
+    console.log(params)
   
     const [products, setProducts] =useState([]);
 
@@ -15,16 +16,22 @@ function ShopPage() {
 
     }
 
-    fetch("https://salty-basin-17655.herokuapp.com/shops/1")
-    .then(r => r.json())
-    .then(data => setProducts(data.products))
+
+    useEffect(() =>{
+         fetch(`https://salty-basin-17655.herokuapp.com/shops/${params.shopId}`)
+        .then(r => r.json())
+        .then(data => setProducts(data.products))
+
+    },[])
+
+   
 
 
 
 
     return (
         <div>
-            <h1>Shop name from server</h1> 
+            <h1>Shop </h1> 
             <p>Category from server</p>
             <div className='shop-products'>
             <button className='add-new-product' onClick={handleClick}>New Product</button>

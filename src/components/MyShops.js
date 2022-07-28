@@ -31,7 +31,7 @@ function MyShops() {
            <ul className='available-shops'>
             { shops.map((shop)=> {
 
-                   return <Shop key={shop.id} shop={shop}/>
+                   return <Shop key={shop.id} shop={shop} shopId = {shop.id}/>
 
             })}
            

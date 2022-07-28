@@ -20,7 +20,7 @@ function App() {
       <Routes>
    
         <Route  path="/myshops" element= { <MyShops />}></Route>
-        <Route  path="/shoppage" element= { <ShopPage/>}></Route>
+        <Route  path="/myshops/:shopId" element= { <ShopPage/>}></Route>
         <Route  path="/newproduct" element= { <NewProduct />}></Route>
         <Route  path="/newshop" element= { <NewShop />}></Route>
         <Route path="/" element={ <Home />}>
