@@ -12,11 +12,9 @@ function ShopPage() {
    const navigate = useNavigate();
     function handleClick(){
         //navigate to the all products component
-        navigate("/newproduct")
+        navigate(`/newproduct/${params.shopId}`)
 
     }
-
-
     useEffect(() =>{
          fetch(`https://salty-basin-17655.herokuapp.com/shops/${params.shopId}`)
         .then(r => r.json())

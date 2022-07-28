@@ -5,6 +5,7 @@ function NewShop({onAddShop}) {
 
     const [name, setName] = useState("");
     const [category, setCategory] = useState("Clothing");
+    
 
     
     const navigate = useNavigate();
@@ -15,7 +16,8 @@ function NewShop({onAddShop}) {
              method: "POST",
               body: JSON.stringify({
                name:name,
-               category:category
+               category:category,
+               products: []
                 
     }),
     headers: {

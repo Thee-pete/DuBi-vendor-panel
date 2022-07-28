@@ -22,7 +22,9 @@ function App() {
     setShops([...shops, newShop])
 
   }
-  
+  function onAddNewProduct(newProduct){
+    setProducts([...products, newProduct])
+  }
 
 
 
@@ -34,8 +36,8 @@ function App() {
       <Routes>
    
         <Route  path="/myshops" element= { <MyShops shops={shops} getShops={getShops}  />}></Route>
-        <Route  path="/myshops/:shopId" element= { <ShopPage/>}></Route>
-        <Route  path="/newproduct" element= { <NewProduct />}></Route>
+        <Route  path="/myshops/:shopId" element= { <ShopPage />}></Route>
+        <Route  path="/newproduct/:shopId" element= { <NewProduct onAddNewProduct={onAddNewProduct} />}></Route>
         <Route  path="/newshop" element= { <NewShop onAddShop = {onAddShop}/>}></Route>
         <Route path="/" element={ <Home />}>
          
