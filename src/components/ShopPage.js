@@ -3,6 +3,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 import Product from './Product';
 
 function ShopPage() {
+   // let shopname= "";
+    //let categoryname= "";
     const params = useParams();
     console.log(params)
   
@@ -23,13 +25,23 @@ function ShopPage() {
         
         })
 
-    },[])
+    },[params.shopId])
+
+   /* useEffect(()=>{
+        fetch(`https://salty-basin-17655.herokuapp.com/shops/${params.shopId}`)
+        .then(r=>r.json())
+        .then((data) => {
+            shopname = data.name;
+            categoryname = data.category;
+        })
+    },[])*/
+ 
 
     if(products == null){
         return (
         <div> 
-            <h1>Shop </h1> 
-            <p>Category from server</p>
+            <h1>Shop</h1> 
+            <p></p>
             <div className='shop-products'>
             <button className='add-new-product' onClick={handleClick}>New Product</button>
             </div>
@@ -42,8 +54,8 @@ function ShopPage() {
   
     return (
         <div>
-            <h1>Shop </h1> 
-            <p>Category from server</p>
+            <h1>Shop</h1> 
+            <p></p>
             <div className='shop-products'>
             <button className='add-new-product' onClick={handleClick}>New Product</button>
             <ul className='all-products-container'>

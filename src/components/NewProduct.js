@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-//need a shops prop
+//need a shops prop?
 
 function NewProduct({onAddNewProduct}) {
 
+   
+   // const [product, setProduct] = useState(products)
     const [name, setName] = useState("Product name")
     const [price, setPrice] = useState(1000);
     const [quantity, setQuantity] = useState(10);
