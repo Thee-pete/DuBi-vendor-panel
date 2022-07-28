@@ -1,13 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function NewShop(props) {
+function NewShop({onAddShop}) {
 
+    const [name, setName] = useState("");
+    const [category, setCategory] = useState("Clothing");
+
+    
     const navigate = useNavigate();
     function handleSubmit(event){
         event.preventDefault();
         //navigate to created shop or to the whole list of shops?
-        navigate("/shopPage")
+        fetch("https://salty-basin-17655.herokuapp.com/shops", {
+             method: "POST",
+              body: JSON.stringify({
+               name:name,
+               category:category
+                
+    }),
+    headers: {
+        "Content-type": "application/json; charset=UTF-8"
+    }
+    })
+    .then(response => response.json())
+    .then(data=> onAddShop(data));
+
+        navigate("/myshops")
     }
 
     return (
@@ -16,12 +34,12 @@ function NewShop(props) {
             <form onSubmit={handleSubmit}>
               <label>
                 Name:
-               <input type="text" name="name" />
+               <input type="text" name="name" value={name} onChange={(e)=> setName(e.target.value)}/>
                </label>
                <br></br>
                <label>
                 Category:
-                <select>
+                <select value={category} onChange = {(e)=> setCategory(e.target.value)}>
                    <option value="clothing">Clothing</option>
                    <option value="footwear">Footwear</option>
                    <option selected value="jewellery">Jewellery</option>

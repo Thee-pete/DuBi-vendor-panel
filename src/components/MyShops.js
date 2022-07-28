@@ -5,9 +5,6 @@ import Shop from './Shop';
 //show list of shops in list
 function MyShops({shops,getShops}) {
 
-  
-
-
     const navigate = useNavigate();
     function handleOnClick(){
         navigate("/newshop");

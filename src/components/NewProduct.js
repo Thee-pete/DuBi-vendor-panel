@@ -10,8 +10,9 @@ function NewProduct() {
     const navigate = useNavigate();
     function handleSubmit(){
         //need to get the specific shop so use id to identify and add the product to the shop
-        navigate("/myshops/1");
+        navigate("/myshops");
     }
+    
 
 
 

@@ -5,10 +5,7 @@ import { useNavigate } from 'react-router-dom';
 function Shop({shop}) {
 
    //const params = useParams();
-   let shopId = shop.id;
-
-
-
+    let shopId = shop.id;
     const navigate =useNavigate();
     function handleOnClick(){
         navigate(`/myshops/${shopId}`)

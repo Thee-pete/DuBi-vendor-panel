@@ -20,11 +20,28 @@ function ShopPage() {
     useEffect(() =>{
          fetch(`https://salty-basin-17655.herokuapp.com/shops/${params.shopId}`)
         .then(r => r.json())
-        .then(data => setProducts(data.products))
+        .then(data => {
+            setProducts(data.products)
+        
+        })
 
     },[])
 
+    if(products == null){
+        return (
+        <div> 
+            <h1>Shop </h1> 
+            <p>Category from server</p>
+            <div className='shop-products'>
+            <button className='add-new-product' onClick={handleClick}>New Product</button>
+            </div>
+        </div>
+            
+        
+        );
 
+    }
+  
     return (
         <div>
             <h1>Shop </h1> 
