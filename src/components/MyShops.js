@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import Shop from './Shop';
 
 //show list of shops in list
-function MyShops() {
+function MyShops({shops,getShops}) {
 
-   const [shops, setShops] = useState([]);
+  
 
 
     const navigate = useNavigate();
@@ -18,7 +18,7 @@ function MyShops() {
 
         fetch("https://salty-basin-17655.herokuapp.com/shops")
         .then((r) => r.json())
-        .then((data) => setShops(data))
+        .then((data) => getShops(data))
     },[])
    
   
@@ -31,7 +31,7 @@ function MyShops() {
            <ul className='available-shops'>
             { shops.map((shop)=> {
 
-                   return <Shop key={shop.id} shop={shop} shopId = {shop.id}/>
+                   return <Shop key={shop.id} shop={shop} shopId = {shop.id} />
 
             })}
            

@@ -24,10 +24,6 @@ function ShopPage() {
 
     },[])
 
-   
-
-
-
 
     return (
         <div>

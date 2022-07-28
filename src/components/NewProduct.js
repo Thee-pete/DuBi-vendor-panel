@@ -1,14 +1,16 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
-
+//need a shops prop
 
 function NewProduct() {
+
+    const params =useParams();
 
     const navigate = useNavigate();
     function handleSubmit(){
         //need to get the specific shop so use id to identify and add the product to the shop
-        navigate("/shoppage");
+        navigate("/myshops/1");
     }
 
 

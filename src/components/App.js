@@ -7,8 +7,21 @@ import NewShop from './NewShop';
 import Home from './Home';
 import Footer from "./Footer";
 import ShopPage from "./ShopPage";
+import { useState } from "react";
 
 function App() {
+
+
+  const [shops,setShops] =useState([]);
+  const [products,setProducts] =useState([]);
+
+  function getShops(shops){
+    setShops(shops)
+  }
+  function onAddShop(newShop){
+    setShops([...shops, newShop])
+
+  }
 
 
 
@@ -19,10 +32,10 @@ function App() {
    
       <Routes>
    
-        <Route  path="/myshops" element= { <MyShops />}></Route>
+        <Route  path="/myshops" element= { <MyShops shops={shops} getShops={getShops}  />}></Route>
         <Route  path="/myshops/:shopId" element= { <ShopPage/>}></Route>
         <Route  path="/newproduct" element= { <NewProduct />}></Route>
-        <Route  path="/newshop" element= { <NewShop />}></Route>
+        <Route  path="/newshop" element= { <NewShop onAddShop = {onAddShop}/>}></Route>
         <Route path="/" element={ <Home />}>
          
          </Route>
