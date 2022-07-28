@@ -10,13 +10,15 @@ function NewProduct({onAddNewProduct}) {
     const [quantity, setQuantity] = useState(10);
 
     const params =useParams();
-    console.log(params.shopId)
+   
+  
 
     //const newProduct = {name:name, price:price, quantity:quantity}
 
     const navigate = useNavigate();
     function handleSubmit(event){
         event.preventDefault()
+       
         //get id of shop
         //need to get the specific shop so use id to identify and add the product to the shop using patch
         fetch(`https://salty-basin-17655.herokuapp.com/shops/${params.shopId}`, {
@@ -32,11 +34,9 @@ function NewProduct({onAddNewProduct}) {
             }),
           })
             .then((r) => r.json())
-            .then((data) => console.log(data));
-        navigate("/myshops");
+            .then((data) => onAddNewProduct(data));
+        navigate(`/myshops/${params.shopId}`);
     }
-
-
 
 
 
