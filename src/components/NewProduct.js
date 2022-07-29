@@ -31,8 +31,8 @@ function NewProduct({onAddNewProduct}) {
             body: JSON.stringify({
                 products : [{name:name, 
                     price:price, 
-                    quantity:quantity,
-                    image:"https://cdn-icons.flaticon.com/png/512/3114/premium/3114577.png?token=exp=1659019940~hmac=aeb980ccbfed476452cc127ad14288d6"
+                    quantity:quantity
+                  
                     }]
                 
             }),

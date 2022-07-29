@@ -17,8 +17,7 @@ function NewShop({onAddShop}) {
               body: JSON.stringify({
                name:name,
                category:category,
-               products: [],
-               image: "https://cdn-icons.flaticon.com/png/512/5804/premium/5804611.png?token=exp=1659022496~hmac=757b78989077db94ddac6bff98a6e7ea"
+               products: []
                 
     }),
     headers: {

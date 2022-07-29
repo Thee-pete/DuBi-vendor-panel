@@ -14,7 +14,7 @@ function Shop({shop}) {
     return (
         <div className="shop-container" onClick={handleOnClick}>
             <h1>{shop.name}</h1>
-            <img src={shop.image} alt= "shop"/>
+            <img src="../shop.png" alt= "shop"/>
             <p>{shop.category} store</p>
         </div>
     );
