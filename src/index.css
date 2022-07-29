@@ -137,6 +137,22 @@ code {
     box-sizing: border-box;
     border-radius: 10px;
 }
+.newproduct-container .input-price{
+  width: 30%;
+  padding: 12px 20px;
+  margin-left: 55px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.newproduct-container .input-name{
+  width: 30%;
+  padding: 12px 20px;
+  margin-left: 52px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
 
 
 

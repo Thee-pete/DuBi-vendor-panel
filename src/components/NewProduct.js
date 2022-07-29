@@ -51,12 +51,12 @@ function NewProduct({onAddNewProduct , products}) {
             <form onSubmit={handleSubmit}>
               <label>
                 Name:
-               <input type="text" name="name" value = {name} onChange ={(e) => setName(e.target.value)} />
+               <input className='input-name' type="text" name="name" value = {name} onChange ={(e) => setName(e.target.value)} />
                </label>
                <br></br>
                <label>
                 Price:
-               <input type="text" name="price" value = {price} onChange = {(e) => setPrice(e.target.value)} />
+               <input className="input-price" type="text" name="price" value = {price} onChange = {(e) => setPrice(e.target.value)} />
                </label>
                <br></br>
                <label>
