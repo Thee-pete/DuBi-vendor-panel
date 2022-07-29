@@ -25,7 +25,7 @@ The live link to this web application is https://dubi-vendor.netlify.app/
 
 ## Technologies 
 
-- Heroku : Used to host the RESTFUL API 
+- Heroku : Used to host the RESTFUL API (https://salty-basin-17655.herokuapp.com/shops) 
 - Netlify : Used to host the front-end 
 - Github : Used to create the repository of the project
 
