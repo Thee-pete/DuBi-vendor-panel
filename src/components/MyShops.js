@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import Shop from './Shop';
 
@@ -16,7 +16,7 @@ function MyShops({shops,getShops}) {
         fetch("https://salty-basin-17655.herokuapp.com/shops")
         .then((r) => r.json())
         .then((data) => getShops(data))
-    },[])
+    },[getShops])
    
   
     return (
