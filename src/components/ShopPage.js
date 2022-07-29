@@ -6,7 +6,7 @@ function ShopPage() {
    // let shopname= "";
     //let categoryname= "";
     const params = useParams();
-    console.log(params)
+   
   
     const [products, setProducts] =useState([]);
 

@@ -3,10 +3,10 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 //need a shops prop?
 
-function NewProduct({onAddNewProduct}) {
+function NewProduct({onAddNewProduct , products}) {
 
    
-   // const [product, setProduct] = useState(products)
+    const [productArray, setProductArray] = useState(products)
     const [name, setName] = useState("Product name")
     const [price, setPrice] = useState(1000);
     const [quantity, setQuantity] = useState(10);
@@ -38,7 +38,8 @@ function NewProduct({onAddNewProduct}) {
             }),
           })
             .then((r) => r.json())
-            .then((data) => onAddNewProduct(data));
+            .then((data) => onAddNewProduct(setProductArray([...productArray, data])));
+          
         navigate(`/myshops/${params.shopId}`);
     }
 

@@ -24,10 +24,11 @@ function App() {
   }
   function onAddNewProduct(newProduct){
     /*const newProducts = shops.map(shop => {
-      if(shop.id === shopId){
+      if(shop.id === newProduct.id){
         return  newProduct; 
       }
-      return shop.products;
+          
+
     })*/
     setProducts([...products, newProduct])
     
@@ -44,7 +45,7 @@ function App() {
    
         <Route  path="/myshops" element= { <MyShops shops={shops} getShops={getShops}  />}></Route>
         <Route  path="/myshops/:shopId" element= { <ShopPage />}></Route>
-        <Route  path="/newproduct/:shopId" element= { <NewProduct onAddNewProduct={onAddNewProduct}  />}></Route>
+        <Route  path="/newproduct/:shopId" element= { <NewProduct onAddNewProduct={onAddNewProduct} products={products}  />}></Route>
         <Route  path="/newshop" element= { <NewShop onAddShop = {onAddShop}/>}></Route>
         <Route path="/" element={ <Home />}>
          
