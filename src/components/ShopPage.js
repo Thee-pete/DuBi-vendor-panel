@@ -57,7 +57,7 @@ function ShopPage() {
             <h1>Shop</h1> 
             <p>hint:please reload to view to view your added product</p>
             <div className='shop-products'>
-            <button className='add-new-product' onClick={handleClick}>New Product</button>
+            <button className='add-new-product' onClick={handleClick}></button>
             <ul className='all-products-container'>
                 {products.map(product => {
                     return <Product key= {product.id} product={product}/>
