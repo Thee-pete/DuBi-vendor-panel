@@ -23,7 +23,9 @@ function NewProduct({onAddNewProduct , products}) {
        
         //get id of shop
         //need to get the specific shop so use id to identify and add the product to the shop using patch
-        fetch(`https://salty-basin-17655.herokuapp.com/shops/${params.shopId}`, {
+
+    
+       fetch(`https://salty-basin-17655.herokuapp.com/shops/${params.shopId}`, {
             method: "PATCH",
             headers: {
               "Content-Type": "application/json",

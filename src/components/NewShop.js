@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 function NewShop({onAddShop}) {
 
-    const [name, setName] = useState("");
+    const [name, setName] = useState("Shop name");
     const [category, setCategory] = useState("Clothing");
     
 
