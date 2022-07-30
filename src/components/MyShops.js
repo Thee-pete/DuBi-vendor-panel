@@ -1,22 +1,42 @@
-import React, { useEffect} from 'react';
+import axios from 'axios';
+import React, { useEffect, useState} from 'react';
 import { useNavigate } from 'react-router-dom';
+import Loading from './Loading';
 import Shop from './Shop';
 
 //show list of shops in list
 function MyShops({shops,getShops}) {
+
+    const [isLoading, setIsLoading] = useState(false);
 
     const navigate = useNavigate();
     function handleOnClick(){
         navigate("/newshop");
     }
 
+        useEffect(() => {
+            const fetchData = async () =>{
+              setIsLoading(true);
+              try {
+                const response = await axios.get("https://salty-basin-17655.herokuapp.com/shops");
+                console.log(response.data)
+                getShops(response.data);
+              } catch (error) {
+                console.error(error.message);
+              }
+              setIsLoading(false);
+            }
+        
+            fetchData();
+          }, [getShops]);
 
-    useEffect(()=>{
+        
 
-        fetch("https://salty-basin-17655.herokuapp.com/shops")
-        .then((r) => r.json())
-        .then((data) => getShops(data))
-    },[getShops])
+   const renderShops= shops.map((shop)=> {
+
+    return <Shop key={shop.id} shop={shop} shopId = {shop.id} />
+
+})
    
   
     return (
@@ -27,11 +47,7 @@ function MyShops({shops,getShops}) {
             <button className='new-shop-btn' onClick={handleOnClick}></button>
            
            <flex className='available-shops'> 
-            { shops.map((shop)=> {
-
-                   return <Shop key={shop.id} shop={shop} shopId = {shop.id} />
-
-            })}
+            {isLoading ? <Loading/> : renderShops }
            
            </flex>
            

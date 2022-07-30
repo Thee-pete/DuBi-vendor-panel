@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import Loading from './Loading';
 import Product from './Product';
 
 function ShopPage() {
@@ -9,6 +10,7 @@ function ShopPage() {
    
   
     const [products, setProducts] =useState([]);
+    const [isLoading, setIsLoading] = useState(false);
 
     ///get all products from specific shop id
    const navigate = useNavigate();
@@ -17,11 +19,14 @@ function ShopPage() {
         navigate(`/newproduct/${params.shopId}`)
 
     }
+
     useEffect(() =>{
+        setIsLoading(true);
          fetch(`https://salty-basin-17655.herokuapp.com/shops/${params.shopId}`)
         .then(r => r.json())
         .then(data => {
             setProducts(data.products)
+            setIsLoading(false);
         
         })
 
@@ -51,6 +56,10 @@ function ShopPage() {
         );
 
     }
+
+    const renderProducts = products.map(product => {
+        return <Product key= {product.id} product={product}/>
+    })
   
     return (
         <div>
@@ -59,9 +68,7 @@ function ShopPage() {
             <div className='shop-products'>
             <button className='add-new-product' onClick={handleClick}></button>
             <ul className='all-products-container'>
-                {products.map(product => {
-                    return <Product key= {product.id} product={product}/>
-                })}
+                {isLoading ? <Loading/> : renderProducts}
                 
               
             </ul>

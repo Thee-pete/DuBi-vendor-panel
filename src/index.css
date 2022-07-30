@@ -114,6 +114,7 @@ code {
   margin: 5px;
   align-self: center;
 }
+
 .product-container{
   border-radius: 10px;
   border: solid black 2px;
@@ -191,6 +192,7 @@ code {
 .all-products-container{
   display: flex;
   max-width: 80%;
+  margin-left: 30px;
 }
 .shops-container{
   width:100%;
@@ -213,6 +215,7 @@ code {
 .available-shops{
   display: flex;
   max-width: 80%;
+  margin-left: 50px;
 }
 .shop-container img {
   width:100px;
@@ -222,6 +225,21 @@ code {
   width:150px;
   height:150px;
 }
-
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 10px solid #f3f3f3; /* Light grey */
+  border-top: 10px solid #383636; /* Black */
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+}
 
 

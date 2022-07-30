@@ -7,7 +7,7 @@ import NewShop from './NewShop';
 import Home from './Home';
 import Footer from "./Footer";
 import ShopPage from "./ShopPage";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 function App() {
 
@@ -15,9 +15,14 @@ function App() {
   const [shops,setShops] =useState([]);
   const [products,setProducts] =useState([]);
 
-  function getShops(shops){
+  /*function getShops(shops){
     setShops(shops)
-  }
+  }*/
+  const getShops = useCallback((shops) => {
+    setShops(shops);
+  },[])
+
+ 
   function onAddShop(newShop){
     setShops([...shops, newShop])
 
